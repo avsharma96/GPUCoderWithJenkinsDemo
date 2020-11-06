@@ -1,0 +1,43 @@
+[1/6] nvcc -c -rdc=true -Xcompiler "/wd 4819" -Xcompiler "/MD" -Xcudafe "--display_error_number --diag_suppress=2381 --diag_suppress=unsigned_compare_with_zero --diag_suppress=useless_type_qualifier_on_return_type" -D_GNU_SOURCE -DMATLAB_MEX_FILE -I "." -I "C:\Users\adis\OneDrive - MathWorks\Documents\MATLAB\Examples\R2020a\GPUCoderJenkinsExample" -I ".\interface" -I "C:\Program Files\MATLAB\R2020a\extern\include" -I "." -DMW_CUDA_ARCH=350 -DMODEL=addWithType_mex -DMW_NEEDS_VERSION_H  -arch sm_35  --fmad=false -I "C:\Program Files\MATLAB\R2020a/simulink/include" -I "C:\Program Files\MATLAB\R2020a/toolbox/shared/simtargets" rt_nonfinite.cpp -o build\win64\rt_nonfinite.obj
+rt_nonfinite.cpp
+[2/6] nvcc -c -rdc=true -Xcompiler "/wd 4819" -Xcompiler "/MD" -Xcudafe "--display_error_number --diag_suppress=2381 --diag_suppress=unsigned_compare_with_zero --diag_suppress=useless_type_qualifier_on_return_type" -D_GNU_SOURCE -DMATLAB_MEX_FILE -I "." -I "C:\Users\adis\OneDrive - MathWorks\Documents\MATLAB\Examples\R2020a\GPUCoderJenkinsExample" -I ".\interface" -I "C:\Program Files\MATLAB\R2020a\extern\include" -I "." -DMW_CUDA_ARCH=350 -DMODEL=addWithType_mex -DMW_NEEDS_VERSION_H  -arch sm_35  --fmad=false -I "C:\Program Files\MATLAB\R2020a/simulink/include" -I "C:\Program Files\MATLAB\R2020a/toolbox/shared/simtargets" cpp_mexapi_version.cpp -o build\win64\cpp_mexapi_version.obj
+cpp_mexapi_version.cpp
+[3/6] nvcc -c -rdc=true -Xcompiler "/wd 4819" -Xcompiler "/MD" -Xcudafe "--display_error_number --diag_suppress=2381 --diag_suppress=unsigned_compare_with_zero --diag_suppress=useless_type_qualifier_on_return_type" -D_GNU_SOURCE -DMATLAB_MEX_FILE -I "." -I "C:\Users\adis\OneDrive - MathWorks\Documents\MATLAB\Examples\R2020a\GPUCoderJenkinsExample" -I ".\interface" -I "C:\Program Files\MATLAB\R2020a\extern\include" -I "." -DMW_CUDA_ARCH=350 -DMODEL=addWithType_mex -DMW_NEEDS_VERSION_H  -arch sm_35  --fmad=false -I "C:\Program Files\MATLAB\R2020a/simulink/include" -I "C:\Program Files\MATLAB\R2020a/toolbox/shared/simtargets" addWithType.cu -o build\win64\addWithType.obj
+addWithType.cu
+[4/6] nvcc -c -rdc=true -Xcompiler "/wd 4819" -Xcompiler "/MD" -Xcudafe "--display_error_number --diag_suppress=2381 --diag_suppress=unsigned_compare_with_zero --diag_suppress=useless_type_qualifier_on_return_type" -D_GNU_SOURCE -DMATLAB_MEX_FILE -I "." -I "C:\Users\adis\OneDrive - MathWorks\Documents\MATLAB\Examples\R2020a\GPUCoderJenkinsExample" -I ".\interface" -I "C:\Program Files\MATLAB\R2020a\extern\include" -I "." -DMW_CUDA_ARCH=350 -DMODEL=addWithType_mex -DMW_NEEDS_VERSION_H  -arch sm_35  --fmad=false -I "C:\Program Files\MATLAB\R2020a/simulink/include" -I "C:\Program Files\MATLAB\R2020a/toolbox/shared/simtargets" interface\_coder_addWithType_info.cu -o build\win64\_coder_addWithType_info.obj
+_coder_addWithType_info.cu
+[5/6] nvcc -c -rdc=true -Xcompiler "/wd 4819" -Xcompiler "/MD" -Xcudafe "--display_error_number --diag_suppress=2381 --diag_suppress=unsigned_compare_with_zero --diag_suppress=useless_type_qualifier_on_return_type" -D_GNU_SOURCE -DMATLAB_MEX_FILE -I "." -I "C:\Users\adis\OneDrive - MathWorks\Documents\MATLAB\Examples\R2020a\GPUCoderJenkinsExample" -I ".\interface" -I "C:\Program Files\MATLAB\R2020a\extern\include" -I "." -DMW_CUDA_ARCH=350 -DMODEL=addWithType_mex -DMW_NEEDS_VERSION_H  -arch sm_35  --fmad=false -I "C:\Program Files\MATLAB\R2020a/simulink/include" -I "C:\Program Files\MATLAB\R2020a/toolbox/shared/simtargets" interface\_coder_addWithType_mex.cu -o build\win64\_coder_addWithType_mex.obj
+_coder_addWithType_mex.cu
+[6/6] nvcc -Xlinker  /nologo -Xlinker  /manifest   -Xlinker  /DLL -L"C:\Program Files\MATLAB\R2020a\extern\lib\win64\microsoft" libmx.lib libmex.lib libmat.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib libMatlabDataArray.lib libMatlabEngine.lib   libemlrt.lib libcovrt.lib libut.lib libmwmathutil.lib -arch sm_35  -L"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.1\lib\x64" cudart.lib cublas.lib cusolver.lib cufft.lib cuda.lib -Xnvlink -w  -Wno-deprecated-gpu-targets -Xlinker /NODEFAULTLIB:libcmt.lib -o addWithType_mex.mexw64 build\win64\rt_nonfinite.obj build\win64\addWithType.obj build\win64\_coder_addWithType_mex.obj build\win64\_coder_addWithType_info.obj build\win64\cpp_mexapi_version.obj
+libmx.lib
+libmex.lib
+libmat.lib
+kernel32.lib
+user32.lib
+gdi32.lib
+winspool.lib
+comdlg32.lib
+advapi32.lib
+shell32.lib
+ole32.lib
+oleaut32.lib
+uuid.lib
+odbc32.lib
+odbccp32.lib
+libMatlabDataArray.lib
+libMatlabEngine.lib
+libemlrt.lib
+libcovrt.lib
+libut.lib
+libmwmathutil.lib
+cudart.lib
+cublas.lib
+cusolver.lib
+cufft.lib
+cuda.lib
+rt_nonfinite.obj
+addWithType.obj
+_coder_addWithType_mex.obj
+_coder_addWithType_info.obj
+cpp_mexapi_version.obj
+   Creating library addWithType_mex.lib and object addWithType_mex.exp

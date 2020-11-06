@@ -1,0 +1,12 @@
+MEX {
+	global:
+		mexFunction;
+		mexfilerequiredapiversion;
+		emlrtMexFcnProperties;
+		mandelbrot_count_initialize;
+		mandelbrot_count_terminate;
+		mandelbrot_count_atexit;
+		mandelbrot_count;
+	local:
+		*;
+};
