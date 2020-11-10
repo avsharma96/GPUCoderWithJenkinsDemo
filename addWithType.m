@@ -1,3 +1,3 @@
 function out = addWithType(a,b)
-out = double(a + b);
+out = single(a + b);
 end

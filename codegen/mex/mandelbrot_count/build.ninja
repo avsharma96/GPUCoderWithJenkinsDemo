@@ -6,7 +6,7 @@ ninja_required_version = 1.3
 root = .
 builddir = $root\build\win64
 matlabdir = C:\Program Files\MATLAB\R2020a
-startdir = C:\Users\adis\OneDrive - MathWorks\Documents\MATLAB\Examples\R2020a\GPUCoderJenkinsExample
+startdir = C:\Users\adis\OneDrive - MathWorks\Documents\MATLAB\Examples\R2020a\GPUCoderWithJenkinsDemo
 
 # Toolchain information
 cc = cl
@@ -47,11 +47,15 @@ rule linkcuda
 
 # Build
 build $builddir\rt_nonfinite.obj : cudac $root\rt_nonfinite.cpp
+build $builddir\mandelbrot_count_data.obj : cudac $root\mandelbrot_count_data.cu
+build $builddir\mandelbrot_count_initialize.obj : cudac $root\mandelbrot_count_initialize.cu
+build $builddir\mandelbrot_count_terminate.obj : cudac $root\mandelbrot_count_terminate.cu
 build $builddir\mandelbrot_count.obj : cudac $root\mandelbrot_count.cu
+build $builddir\_coder_mandelbrot_count_api.obj : cudac $root\interface\_coder_mandelbrot_count_api.cu
 build $builddir\_coder_mandelbrot_count_mex.obj : cudac $root\interface\_coder_mandelbrot_count_mex.cu
 build $builddir\_coder_mandelbrot_count_info.obj : cudac $root\interface\_coder_mandelbrot_count_info.cu
 build $builddir\MWCudaDimUtility.obj : cudac $root\MWCudaDimUtility.cu
 build $builddir\cpp_mexapi_version.obj : cudac $root\cpp_mexapi_version.cpp
 
 # Link
-build $root\mandelbrot_count_mex.mexw64 : linkcuda $builddir\rt_nonfinite.obj $builddir\mandelbrot_count.obj $builddir\_coder_mandelbrot_count_mex.obj $builddir\_coder_mandelbrot_count_info.obj $builddir\MWCudaDimUtility.obj $builddir\cpp_mexapi_version.obj 
+build $root\mandelbrot_count_mex.mexw64 : linkcuda $builddir\rt_nonfinite.obj $builddir\mandelbrot_count_data.obj $builddir\mandelbrot_count_initialize.obj $builddir\mandelbrot_count_terminate.obj $builddir\mandelbrot_count.obj $builddir\_coder_mandelbrot_count_api.obj $builddir\_coder_mandelbrot_count_mex.obj $builddir\_coder_mandelbrot_count_info.obj $builddir\MWCudaDimUtility.obj $builddir\cpp_mexapi_version.obj 

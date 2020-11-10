@@ -7,7 +7,11 @@
 
 // Include files
 #include "_coder_mandelbrot_count_mex.h"
+#include "_coder_mandelbrot_count_api.h"
 #include "mandelbrot_count.h"
+#include "mandelbrot_count_data.h"
+#include "mandelbrot_count_initialize.h"
+#include "mandelbrot_count_terminate.h"
 
 // Function Declarations
 MEXFUNCTION_LINKAGE void mandelbrot_count_mexFunction(int32_T nlhs, mxArray
