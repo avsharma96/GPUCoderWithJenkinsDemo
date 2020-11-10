@@ -10,9 +10,8 @@ classdef TestMandelbrotCount < matlab.unittest.TestCase
             diff = c1 - countCPU;
             error = sum(sum(diff.^2));
             
-            disp(error)
-            % Check if the coun difference exceeds the absolute tolerance
-            testCase.verifyEqual( error, 0,'AbsTol',tolerance);
+            % Check if the count difference exceeds the absolute tolerance
+            testCase.verifyEqual(error, 0,'AbsTol',tolerance);
 
         end
     end
